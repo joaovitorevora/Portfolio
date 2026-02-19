@@ -255,42 +255,63 @@ const App = () => {
 
       {/* --- PLANOS --- */}
       <section id="planos" className="py-32 bg-slate-50 border-y border-slate-200 text-center">
+
         <div className="container mx-auto px-6">
+
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-20 uppercase tracking-tighter italic">Escolha o plano <span className="text-blue-600">ideal para sua empresa</span></h2>
+
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            
-            {/* Plano Smart */}
-            <motion.div whileHover={{ y: -15, scale: 1.02 }} className="bg-white p-10 rounded-[3rem] border border-slate-200 flex flex-col hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-2xl font-black mb-4 uppercase tracking-tight">Profissional Smart</h3>
-              <p className="text-slate-500 mb-8 italic font-medium">Ideal para presença digital objetiva com poucas páginas.</p>
-              <div className="mb-8 font-black text-slate-900 leading-none">
-                <span className="text-2xl">R$</span> <span className="text-6xl tracking-tighter">700</span>
-              </div>
+
+            <motion.div whileHover={{ y: -15, scale: 1.02 }} className="bg-white p-10 rounded-[3rem] border border-slate-200 flex flex-col hover:shadow-2xl transition-all">
+
+              <h3 className="text-2xl font-black mb-4 uppercase">Profissional Smart</h3>
+
+              <p className="text-slate-500 mb-8 italic">Ideal para presença digital objetiva.</p>
+
+              <div className="mb-8 font-black"><span className="text-2xl">R$</span> <span className="text-5xl">700</span></div>
+
               <div className="space-y-4 mb-10 flex-grow text-left">
+
                 {["Até 2 páginas", "Design personalizado", "WhatsApp Integrado", "Responsividade", "Suporte 20 dias"].map(item => (
+
                   <div key={item} className="flex items-center gap-3 text-sm text-slate-600 font-bold"><CheckCircle2 className="text-blue-500" size={16}/> {item}</div>
+
                 ))}
+
               </div>
+
               <button onClick={() => openContactForm("Plano Smart")} className="w-full py-5 rounded-2xl bg-white border-2 border-slate-900 font-black text-slate-900 hover:bg-slate-900 hover:text-white transition-all uppercase tracking-tighter">ENTRAR EM CONTATO</button>
+
             </motion.div>
 
-            {/* Plano Plus */}
-            <motion.div whileHover={{ y: -15, scale: 1.02 }} className="bg-slate-900 p-10 rounded-[3rem] text-white flex flex-col hover:shadow-2xl transition-all relative overflow-hidden shadow-xl shadow-blue-500/10 duration-300">
-              <div className="absolute top-8 right-8 bg-blue-600 text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest animate-pulse">Mais Completo</div>
-              <h3 className="text-2xl font-black mb-4 uppercase text-blue-400 tracking-tight">Profissional Plus</h3>
-              <p className="text-slate-400 mb-8 italic font-medium">Estrutura robusta para autoridade e resultados completos.</p>
-              <div className="mb-8 font-black leading-none">
-                <span className="text-2xl text-blue-400">R$</span> <span className="text-6xl tracking-tighter">1.997</span>
-              </div>
+            <motion.div whileHover={{ y: -15, scale: 1.02 }} className="bg-slate-900 p-10 rounded-[3rem] text-white flex flex-col hover:shadow-2xl transition-all relative overflow-hidden">
+
+              <div className="absolute top-8 right-8 bg-blue-600 text-[10px] font-black px-4 py-1 rounded-full uppercase">Mais Completo</div>
+
+              <h3 className="text-2xl font-black mb-4 uppercase text-blue-400">Profissional Plus</h3>
+
+              <p className="text-slate-400 mb-8 italic">Estrutura robusta para autoridade.</p>
+
+              <div className="mb-8 font-black"><span className="text-2xl">R$</span> <span className="text-5xl">1.997</span></div>
+
               <div className="space-y-4 mb-10 flex-grow text-left">
-                {["Até 5 páginas", "Design personalizado", "WhatsApp Integrado", "SEO Otimizado", "Suporte 30 dias"].map(item => (
+
+                {["Até 5 páginas", "Design personalizado", "WhatsApp Integrado","Formulários", "SEO Otimizado", "Responsividade", "Suporte 30 dias"].map(item => (
+
                   <div key={item} className="flex items-center gap-3 text-sm text-slate-300 font-bold"><CheckCircle2 className="text-blue-400" size={16}/> {item}</div>
+
                 ))}
+
               </div>
+
               <button onClick={() => openContactForm("Plano Plus")} className="w-full py-5 rounded-2xl bg-blue-600 font-black text-white hover:bg-blue-500 shadow-lg shadow-blue-600/30 transition-all uppercase tracking-tighter">ENTRAR EM CONTATO</button>
+
             </motion.div>
+
           </div>
+
         </div>
+
       </section>
 
       {/* --- GARANTIAS --- */}
