@@ -1,0 +1,12 @@
+# Autoriza todos os robôs de busca (Google, Bing, etc)
+User-agent: *
+
+# Impede que indexem pastas de build ou arquivos sensíveis
+Disallow: /node_modules/
+Disallow: /dist/
+
+# Autoriza o restante do site
+Allow: /
+
+# Indica onde está o mapa do seu site (substitua pelo seu domínio real)
+Sitemap: https://joaovdev.com.br/
