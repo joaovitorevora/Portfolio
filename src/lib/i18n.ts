@@ -226,42 +226,84 @@ export const PROJECTS = [
 // Courses & Certifications
 export const COURSES = [
   {
+    name: "Computer Science",
+    issuer: "Universidade Paulista",
+    year: 2025,
+    pt: {
+      name: "Ciência da Computação",
+      description: "Bacharel em Ciência da Computação com formação sólida em fundamentos computacionais, algoritmos e desenvolvimento de software.",
+    },
+    en: {
+      name: "Computer Science",
+      description: "Bachelor's degree in Computer Science with solid foundation in computational fundamentals, algorithms and software development.",
+    },
+    es: {
+      name: "Ciencias de la Computación",
+      description: "Licenciatura en Ciencias de la Computación con formación sólida en fundamentos computacionales, algoritmos y desarrollo de software.",
+    },
+    certificateUrl: "https://drive.google.com/file/d/171JheRfHEX8xIqTGjcjxLudQ-pBHHcuB/view?usp=drive_link",
+  },
+  {
     name: "Modern Java: Mastering Features from Java 8 to Java 21",
     issuer: "Udemy",
-    year: 2024,
-    pt: { description: "Domínio dos recursos modernos do Java, do Java 8 ao Java 21." },
-    en: { description: "Mastering modern Java features, from Java 8 to Java 21." },
-    es: { description: "Dominio de las características modernas de Java, de Java 8 a Java 21." },
+    year: 2025,
+    pt: {
+      name: "Modern Java: Dominando recursos do Java 8 ao Java 21",
+      description: "Domínio dos recursos modernos do Java, do Java 8 ao Java 21.",
+    },
+    en: {
+      name: "Modern Java: Mastering Features from Java 8 to Java 21",
+      description: "Mastering modern Java features, from Java 8 to Java 21.",
+    },
+    es: {
+      name: "Modern Java: Dominando características de Java 8 a Java 21",
+      description: "Dominio de las características modernas de Java, de Java 8 a Java 21.",
+    },
     certificateUrl: "https://www.udemy.com/certificate/UC-04c3af6c-c935-4bed-9217-f7367ba9fc00/",
   },
   {
     name: "Git e Github Essencial para o Desenvolvedor",
     issuer: "Udemy",
-    year: 2024,
+    year: 2025,
     pt: {
-      description:
-        "Fundamentos essenciais de Git e GitHub para o fluxo de trabalho do desenvolvedor.",
+      name: "Git e GitHub Essencial para o Desenvolvedor",
+      description: "Fundamentos essenciais de Git e GitHub para o fluxo de trabalho do desenvolvedor.",
     },
-    en: { description: "Essential Git and GitHub fundamentals for the developer workflow." },
-    es: { description: "Fundamentos esenciales de Git y GitHub para el flujo del desarrollador." },
+    en: {
+      name: "Essential Git & GitHub for Developers",
+      description: "Essential Git and GitHub fundamentals for the developer workflow.",
+    },
+    es: {
+      name: "Git y GitHub Esencial para Desarrolladores",
+      description: "Fundamentos esenciales de Git y GitHub para el flujo del desarrollador.",
+    },
     certificateUrl: "https://www.udemy.com/certificate/UC-d341d4db-4452-4b3f-aabf-cda13124e6fd/",
   },
   {
     name: "Gestão Ágil com Scrum COMPLETO",
     issuer: "Udemy",
     year: 2024,
-    pt: { description: "Gestão ágil de projetos com Scrum: papéis, cerimônias e artefatos." },
-    en: { description: "Agile project management with Scrum: roles, ceremonies and artifacts." },
-    es: { description: "Gestión ágil de proyectos con Scrum: roles, ceremonias y artefactos." },
+    pt: {
+      name: "Gestão Ágil com Scrum (COMPLETO)",
+      description: "Gestão ágil de projetos com Scrum: papéis, cerimônias e artefatos.",
+    },
+    en: {
+      name: "Agile Project Management with Scrum (COMPLETE)",
+      description: "Agile project management with Scrum: roles, ceremonies and artifacts.",
+    },
+    es: {
+      name: "Gestión Ágil con Scrum (COMPLETO)",
+      description: "Gestión ágil de proyectos con Scrum: roles, ceremonias y artefactos.",
+    },
     certificateUrl: "https://www.udemy.com/certificate/UC-449d21c9-56e4-4e29-aab4-68eddd268e48/",
   },
   {
     name: "Comunicação Assertiva",
     issuer: "Udemy",
     year: 2024,
-    pt: { description: "Técnicas de comunicação assertiva para ambientes profissionais." },
-    en: { description: "Assertive communication techniques for professional environments." },
-    es: { description: "Técnicas de comunicación asertiva para entornos profesionales." },
+    pt: { name: "Comunicação Assertiva", description: "Técnicas de comunicação assertiva para ambientes profissionais." },
+    en: { name: "Assertive Communication", description: "Assertive communication techniques for professional environments." },
+    es: { name: "Comunicación Asertiva", description: "Técnicas de comunicación asertiva para entornos profesionales." },
     certificateUrl: "https://www.udemy.com/certificate/UC-702679a7-b7fd-45ce-a088-a44f1f1bbbec/",
   },
   {
@@ -269,19 +311,26 @@ export const COURSES = [
     issuer: "Udemy",
     year: 2024,
     pt: {
+      name: "Git Completo: Do Básico ao Avançado",
       description: "Git completo, do básico ao avançado, incluindo fluxos de trabalho em equipe.",
     },
-    en: { description: "Complete Git, from basics to advanced topics, including team workflows." },
-    es: { description: "Git completo, de lo básico a lo avanzado, incluyendo flujos en equipo." },
+    en: {
+      name: "Complete Git: From Basics to Advanced",
+      description: "Complete Git, from basics to advanced topics, including team workflows.",
+    },
+    es: {
+      name: "Git Completo: De Básico a Avanzado",
+      description: "Git completo, de lo básico a lo avanzado, incluyendo flujos en equipo.",
+    },
     certificateUrl: "https://www.udemy.com/certificate/UC-7978eced-cddb-4794-a668-1eaecf108e7b/",
   },
   {
     name: "NLW Journey - Java",
     issuer: "Rocketseat",
     year: 2024,
-    pt: { description: "Imersão prática construindo aplicações com Java no NLW Journey." },
-    en: { description: "Hands-on immersion building Java applications during NLW Journey." },
-    es: { description: "Inmersión práctica construyendo aplicaciones con Java en el NLW Journey." },
+    pt: { name: "NLW Journey - Java", description: "Imersão prática construindo aplicações com Java no NLW Journey." },
+    en: { name: "NLW Journey - Java", description: "Hands-on immersion building Java applications during NLW Journey." },
+    es: { name: "NLW Journey - Java", description: "Inmersión práctica construyendo aplicaciones con Java en el NLW Journey." },
     certificateUrl:
       "https://app.rocketseat.com.br/certificates/66dbe548-1aa1-4c49-bc79-cdf8dd387462",
   },
@@ -289,18 +338,27 @@ export const COURSES = [
     name: "React JS do Zero ao Avançado na Prática",
     issuer: "Udemy",
     year: 2024,
-    pt: { description: "React JS na prática, do zero ao avançado, com projetos reais." },
-    en: { description: "Hands-on React JS, from zero to advanced, with real projects." },
-    es: { description: "React JS en la práctica, de cero a avanzado, con proyectos reales." },
+    pt: {
+      name: "React JS do Zero ao Avançado na Prática",
+      description: "React JS na prática, do zero ao avançado, com projetos reais.",
+    },
+    en: {
+      name: "React JS: From Zero to Advanced (Hands-on)",
+      description: "Hands-on React JS, from zero to advanced, with real projects.",
+    },
+    es: {
+      name: "React JS de Cero a Avanzado en la Práctica",
+      description: "React JS en la práctica, de cero a avanzado, con proyectos reales.",
+    },
     certificateUrl: "https://www.udemy.com/certificate/UC-917c9283-e079-4f78-b83d-87f0afc483ca/",
   },
   {
     name: "Curso de Java",
     issuer: "Rocketseat",
-    year: 2024,
-    pt: { description: "Fundamentos e prática de Java aplicados ao mercado." },
-    en: { description: "Java fundamentals and practice applied to real-world scenarios." },
-    es: { description: "Fundamentos y práctica de Java aplicados al mercado." },
+    year: 2023,
+    pt: { name: "Curso de Java", description: "Fundamentos e prática de Java aplicados ao mercado." },
+    en: { name: "Java Course", description: "Java fundamentals and practice applied to real-world scenarios." },
+    es: { name: "Curso de Java", description: "Fundamentos y práctica de Java aplicados al mercado." },
     certificateUrl:
       "https://app.rocketseat.com.br/certificates/f15578b1-4957-4a18-9cc2-0330b6c8199c",
   },
@@ -309,12 +367,14 @@ export const COURSES = [
     issuer: "Resilia Educação",
     year: 2023,
     pt: {
+      name: "Desenvolvimento Web (Bootcamp)",
       description: "Bootcamp completo de desenvolvimento web, com frontend, backend e projetos.",
     },
     en: {
+      name: "Web Development (Bootcamp)",
       description: "Complete web development bootcamp covering frontend, backend and projects.",
     },
-    es: { description: "Bootcamp completo de desarrollo web: frontend, backend y proyectos." },
+    es: { name: "Desarrollo Web (Bootcamp)", description: "Bootcamp completo de desarrollo web: frontend, backend y proyectos." },
     certificateUrl: "https://drive.google.com/file/d/1BCEt9wEKwK5SsSUVFHU9PSj43Kv3cfcF/view",
   },
 ];
@@ -341,7 +401,7 @@ export const translations = {
     status: {
       title: "Status Atual",
       activeNow: "Ativo agora",
-      changeMood: "Alterar foco",
+      changeMood: "Foco",
       currentRole: "Cargo",
       currentCompany: "Empresa",
     },
@@ -413,7 +473,7 @@ export const translations = {
     status: {
       title: "Current Status",
       activeNow: "Active now",
-      changeMood: "Change focus",
+      changeMood: "Focus",
       currentRole: "Role",
       currentCompany: "Company",
     },
@@ -482,7 +542,7 @@ export const translations = {
     status: {
       title: "Estado Actual",
       activeNow: "Activo ahora",
-      changeMood: "Cambiar foco",
+      changeMood: "Foco",
       currentRole: "Cargo",
       currentCompany: "Empresa",
     },

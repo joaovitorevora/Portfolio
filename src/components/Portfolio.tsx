@@ -228,8 +228,7 @@ function BentoCard({
 
 // ============ STATUS WIDGET ============
 function StatusWidget({ t, lang }: { t: (typeof translations)[Lang]; lang: Lang }) {
-  const [moodIdx, setMoodIdx] = useState(0);
-  const mood = MOODS[moodIdx];
+  const mood = MOODS[1]; // Codando
   const current = TIMELINE[TIMELINE.length - 1][lang];
 
   return (
@@ -265,20 +264,15 @@ function StatusWidget({ t, lang }: { t: (typeof translations)[Lang]; lang: Lang 
         </div>
       </div>
 
-      <button
-        onClick={() => setMoodIdx((i) => (i + 1) % MOODS.length)}
-        className="mt-auto flex items-center justify-between rounded-lg border border-border bg-secondary/40 px-3 py-2.5 text-sm transition-all hover:border-indigo-accent/40 hover:bg-secondary/60"
-      >
+      <div className="mt-auto flex items-center justify-between rounded-lg border border-border bg-secondary/40 px-3 py-2.5 text-sm transition-all hover:border-indigo-accent/40 hover:bg-secondary/60">
         <span className="flex items-center gap-2">
           <span className="text-base">{mood.emoji}</span>
-          <span key={moodIdx} className="animate-fade-in font-medium">
-            {mood[lang]}
-          </span>
+          <span className="font-medium">{mood[lang]}</span>
         </span>
         <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
           {t.status.changeMood}
         </span>
-      </button>
+      </div>
     </div>
   );
 }
@@ -345,6 +339,10 @@ function TerminalWidget({ t }: { t: (typeof translations)[Lang] }) {
   );
   const [input, setInput] = useState("");
   const endRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setHistory(t.terminal.welcome.map((text) => ({ kind: "out" as const, text })));
+  }, [t.terminal.welcome]);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -630,7 +628,7 @@ function CoursesWidget({ t, lang }: { t: (typeof translations)[Lang]; lang: Lang
           >
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className="text-sm font-semibold">{c.name}</h3>
+                <h3 className="text-sm font-semibold">{(c as any)[lang]?.name ?? c.name}</h3>
                 <p className="mt-0.5 text-xs text-muted-foreground">
                   {c.issuer} · {c.year}
                 </p>
@@ -639,7 +637,7 @@ function CoursesWidget({ t, lang }: { t: (typeof translations)[Lang]; lang: Lang
                 <Award className="h-4 w-4" />
               </div>
             </div>
-            <p className="mt-3 text-xs leading-relaxed text-foreground/80">{c[lang].description}</p>
+            <p className="mt-3 text-xs leading-relaxed text-foreground/80">{(c as any)[lang]?.description ?? c.en?.description ?? c["pt"]?.description}</p>
             <a
               href={c.certificateUrl}
               target="_blank"
